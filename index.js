@@ -8,7 +8,6 @@ function getCharacters() {
     .then(resp => resp.json())
     .then(charArray =>  {
         fetchObj = charArray;
-        console.log(fetchObj)
     })
     
 }
@@ -81,8 +80,7 @@ function renderImgInfo1(e) {
     const img2 = document.getElementById('second-selection').src
     const imgDiv = document.getElementById('character-img-container')
  
-
-    if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/lannister.png') { //lannister photo
+    if (img1 === 'http://127.0.0.1:5500/phase-1-project/images/lannister.png') { //lannister photo
         let arr = fetchObj.filter(member => (member.family === 'House Lannister') || (member.family ==='House Lanister'))
         let imgArray = []
         arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
@@ -92,7 +90,7 @@ function renderImgInfo1(e) {
             imgDiv.append(charImg)
         }
 
-    } else if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/stark.png') { //stark photo
+    } else if (img1 === 'http://127.0.0.1:5500/phase-1-project/images/stark.png') { //stark photo
         let arr = fetchObj.filter(member => member.family === 'House Stark')
         let imgArray = []
         arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
@@ -102,7 +100,7 @@ function renderImgInfo1(e) {
             imgDiv.append(charImg)
         }
 
-    } else if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/targaryen.png') {
+    } else if (img1 === 'http://127.0.0.1:5500/phase-1-project/images/targaryen.png') {
         let arr = fetchObj.filter(member => (member.family === 'House Targaryen') || (member.family === 'Targaryan'))
         let imgArray = []
         arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
@@ -111,7 +109,7 @@ function renderImgInfo1(e) {
             charImg.src = image
             imgDiv.append(charImg)
         }
-    } else if (img1 === 'file:///Users/xinyiyao/phase-1-project/images/greyjoy.png') {
+    } else if (img1 === 'http://127.0.0.1:5500/phase-1-project/images/greyjoy.png') {
         let arr = fetchObj.filter(member => (member.family === 'House Greyjoy') || (member.family === 'Greyjoy'))
         let imgArray = []
         arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
@@ -130,8 +128,8 @@ function renderImgInfo2(e) {
     const img2 = document.getElementById('second-selection').src
     const imgDiv = document.getElementById('character-img-container')
  
-
-    if (img2 === 'file:///Users/xinyiyao/phase-1-project/images/lannister.png') { //lannister photo
+    console.log(img2)
+    if (img2 === 'http://127.0.0.1:5500/phase-1-project/images/lannister.png') { //lannister photo
         let arr = fetchObj.filter(member => (member.family === 'House Lannister') || (member.family ==='House Lanister'))
         let imgArray = []
         arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
@@ -141,7 +139,7 @@ function renderImgInfo2(e) {
             imgDiv.append(charImg)
         }
 
-    } else if (img2 === 'file:///Users/xinyiyao/phase-1-project/images/stark.png') { //stark photo
+    } else if (img2 === 'http://127.0.0.1:5500/phase-1-project/images/stark.png') { //stark photo
         let arr = fetchObj.filter(member => member.family === 'House Stark')
         let imgArray = []
         arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
@@ -151,7 +149,7 @@ function renderImgInfo2(e) {
             imgDiv.append(charImg)
         }
 
-    } else if (img2 === 'file:///Users/xinyiyao/phase-1-project/images/targaryen.png') {
+    } else if (img2 === 'http://127.0.0.1:5500/phase-1-project/images/targaryen.png') {
         let arr = fetchObj.filter(member => (member.family === 'House Targaryen') || (member.family === 'Targaryan'))
         let imgArray = []
         arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
@@ -160,7 +158,7 @@ function renderImgInfo2(e) {
             charImg.src = image
             imgDiv.append(charImg)
         }
-    } else if (img2 === 'file:///Users/xinyiyao/phase-1-project/images/greyjoy.png') {
+    } else if (img2 === 'http://127.0.0.1:5500/phase-1-project/images/greyjoy.png') {
         let arr = fetchObj.filter(member => (member.family === 'House Greyjoy') || (member.family === 'Greyjoy'))
         let imgArray = []
         arr.forEach(picture => imgArray.push(picture.imageUrl)) //imgArray has URLs of people who match
